@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 public class main extends JFrame{
 	public main() {
 		super("Cakey");
-		setSize(750,1000);
+		setSize(755,1000);
 		setVisible(true);
 		setResizable(false);
 	}
