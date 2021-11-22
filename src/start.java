@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
+import menu.menuFrame;
 public class start extends JFrame{
 	public start() {
 		super("Cakey");
@@ -32,7 +32,7 @@ public class start extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new menu_screen();
+				new menuFrame();
 				setVisible(false);
 			
 			}
