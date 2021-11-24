@@ -17,13 +17,13 @@ import javax.swing.ScrollPaneConstants;
 import data.Product;
 
 public class menuPanel extends JPanel{
-	menuFrame mframe;
+	
 	public JPanel pnCard;
 	public CardLayout card;
 	
-	public menuPanel(menuFrame mframe) {
+	public menuPanel() {
 		setPreferredSize(new Dimension(600,500));
-		this.mframe=mframe;
+	
 		
 		setOpaque(true);
 	    setBackground(Color.BLACK);
@@ -45,12 +45,12 @@ public class menuPanel extends JPanel{
 	         scrollPane.setPreferredSize(new Dimension(630,500));
 	         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 	         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-	         scrollPane.getVerticalScrollBar().setUnitIncrement(15);
+	         scrollPane.getVerticalScrollBar().setUnitIncrement(15); //스크롤 속도
 	         temp.add(scrollPane, BorderLayout.CENTER);
 	         
 	         
 	         JPanel pn = new JPanel();
-	         pn.setLayout(new GridLayout(0, 3));
+	         pn.setLayout(new GridLayout(0, 3,3,3));
 	         
 	         pn.setOpaque(true);
 	         pn.setBackground(Color.white);

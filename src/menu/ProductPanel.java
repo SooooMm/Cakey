@@ -15,7 +15,7 @@ public class ProductPanel extends JPanel{
 	public ProductPanel(String t) {
 		setBorder(new EmptyBorder(10,10,10,10));
 		setPreferredSize(new Dimension(150,225));
-		setBackground(Color.BLACK);
+		setBackground(Color.PINK);
 		JLabel jlabel = new JLabel(t);
 		add(jlabel);
 	}

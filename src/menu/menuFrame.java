@@ -65,9 +65,9 @@ public class menuFrame extends JFrame {
 		
 		FlowLayout fl = new FlowLayout(FlowLayout.LEFT,5,5);
 		
-		JPanel pnMenu = new menuPanel(this);
+		JPanel pnMenu = new menuPanel();
 		pnMenu.setBackground(Color.green);
-		pnMenu.setBounds(5, 5, 630, 500);
+		pnMenu.setBounds(0, 0, 630, 500);
 		pnMenu.setLayout(fl);
 		frame.add(pnMenu);
 		
