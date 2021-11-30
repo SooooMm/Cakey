@@ -17,7 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-import javafx.scene.layout.Pane;
+//import javafx.scene.layout.Pane;
 import data.Product;
 
 
@@ -50,13 +50,13 @@ public class menuFrame extends JFrame {
 		setLocationRelativeTo(null);
 		setResizable(false);
 		
-		
+		//맨 위 로고 부분
 		JPanel menutext = new JPanel();
 		menutext.setBounds(0, 0, 750, 100);
 		menutext.setBackground(Color.cyan);
 		add(menutext);
 		
-		
+		//그냥 메뉴 전체 틀ㄴ
 		JPanel frame = new JPanel();
 		frame.setBackground(Color.gray);
 		frame.setBounds(20, 120, 710, 510);
@@ -65,6 +65,7 @@ public class menuFrame extends JFrame {
 		
 		FlowLayout fl = new FlowLayout(FlowLayout.LEFT,5,5);
 		
+		//메뉴 틀
 		JPanel pnMenu = new menuPanel();
 		pnMenu.setBackground(Color.green);
 		pnMenu.setBounds(0, 0, 630, 500);
@@ -74,7 +75,7 @@ public class menuFrame extends JFrame {
 		
 		
 		
-		
+		//종류 선택 부분 틀(미완)
 		JPanel select_type = new JPanel();
 		select_type.setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
 		select_type.setBounds(650, 130, 100, 450);

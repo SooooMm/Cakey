@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+//주문 수량 선택 창
 public class select_menu extends JFrame{
 	
 	String name;

@@ -32,7 +32,7 @@ public class start extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new menuFrame();
+				new menuFrame(); //메뉴 프레임 생성
 				setVisible(false);
 			
 			}
