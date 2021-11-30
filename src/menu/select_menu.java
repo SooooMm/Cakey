@@ -18,6 +18,7 @@ public class select_menu extends JFrame{
 	public select_menu() {
 		System.out.println("기본");
 	}
+	
 	public select_menu(String name,int price) {
 		
 		super("메뉴 주문");
@@ -77,8 +78,11 @@ public class select_menu extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				total=Integer.parseInt(menu_num.getText()) * price;
-				if(total>0) System.out.println("이름 : "+name+" 가격 : "+total);
+				if(total>0) {
+					System.out.println("이름 : "+name+" 가격 : "+total);
 					
+				}
+			
 				dispose();
 			}
 		});

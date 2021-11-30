@@ -17,7 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-import javafx.scene.layout.Pane;
+//import javafx.scene.layout.Pane;
 import data.Product;
 
 
@@ -63,40 +63,23 @@ public class menuFrame extends JFrame {
 		frame.setLayout(null);
 		add(frame);
 		
-		FlowLayout fl = new FlowLayout(FlowLayout.LEFT,5,5);
 		
+		//메뉴 패널
 		JPanel pnMenu = new menuPanel();
 		pnMenu.setBackground(Color.green);
 		pnMenu.setBounds(0, 0, 630, 500);
-		pnMenu.setLayout(fl);
+		pnMenu.setLayout(new FlowLayout(FlowLayout.LEFT,5,5));
 		frame.add(pnMenu);
 		
 		
+		//카테고리 패널
+		JPanel pnCategory = new CategoryPanel();
+		pnCategory.setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
+		pnCategory.setBounds(650, 150, 100, 450);
+		add(pnCategory);
 		
 		
-		
-		JPanel select_type = new JPanel();
-		select_type.setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
-		select_type.setBounds(650, 130, 100, 450);
-		JButton[] type_btn = new JButton[6];
-		
-		for(int i=0; i<6; i++) {
-			type_btn[i]= new JButton(Product.type[i]);
-			type_btn[i].setPreferredSize(new Dimension(100,50));
-			//type_btn[i].addMouseListener(cc);
-			select_type.add(type_btn[i]);
-		}
-		add(select_type);
-		
-		/*
-		JLabel ordertext = new JLabel();
-		ordertext.setBounds(20,650,710,200);
-		ordertext.setPreferredSize(new Dimension(710,50));
-		ordertext.setBackground(Color.yellow);
-		ordertext.setOpaque(true);
-		ordertext.setHorizontalAlignment(JLabel.CENTER);
-		add(ordertext);*/
-		
+		//주문창
 		orderFrame = new TextArea("", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 		orderFrame.setBounds(20,700,710,250);
 		orderFrame.setBackground(Color.pink);
