@@ -63,18 +63,26 @@ public class menuFrame extends JFrame {
 		frame.setLayout(null);
 		add(frame);
 		
-		FlowLayout fl = new FlowLayout(FlowLayout.LEFT,5,5);
 		
+//<<<<<<< HEAD
 		//메뉴 틀
+//=======
+		//메뉴 패널
 		JPanel pnMenu = new menuPanel();
 		pnMenu.setBackground(Color.green);
 		pnMenu.setBounds(0, 0, 630, 500);
-		pnMenu.setLayout(fl);
+		pnMenu.setLayout(new FlowLayout(FlowLayout.LEFT,5,5));
 		frame.add(pnMenu);
 		
 		
+		//카테고리 패널
+		JPanel pnCategory = new CategoryPanel();
+		pnCategory.setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
+		pnCategory.setBounds(650, 150, 100, 450);
+		add(pnCategory);
 		
 		
+//<<<<<<< HEAD
 		//종류 선택 부분 틀(미완)
 		JPanel select_type = new JPanel();
 		select_type.setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
@@ -98,6 +106,7 @@ public class menuFrame extends JFrame {
 		ordertext.setHorizontalAlignment(JLabel.CENTER);
 		add(ordertext);*/
 		
+
 		orderFrame = new TextArea("", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 		orderFrame.setBounds(20,700,710,250);
 		orderFrame.setBackground(Color.pink);
