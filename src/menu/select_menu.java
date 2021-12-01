@@ -9,6 +9,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import menu.menuFrame;
 
 public class select_menu extends JFrame{
 	
@@ -21,7 +24,7 @@ public class select_menu extends JFrame{
 	
 	public select_menu(String name,int price) {
 		
-		super("메뉴 주문");
+		setTitle("메뉴주문");
 		setSize(500,280);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -72,6 +75,9 @@ public class select_menu extends JFrame{
 		add(menu_num);
 		add(plus);
 		
+		
+		
+		
 		JButton ok_btn = new JButton("확인");
 		ok_btn.setPreferredSize(new Dimension(360,75));
 		ok_btn.addActionListener(new ActionListener() {
@@ -80,7 +86,9 @@ public class select_menu extends JFrame{
 				total=Integer.parseInt(menu_num.getText()) * price;
 				if(total>0) {
 					System.out.println("이름 : "+name+" 가격 : "+total);
-					
+					menu.menuFrame.orderFrame.append("이름 : "+name+" 가격 : "+total);
+					//orderFrame.selectAll();
+					//orderFrame.setCaretPosition(orderFrame.getDocument().getLength());
 				}
 			
 				dispose();
