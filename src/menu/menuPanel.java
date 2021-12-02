@@ -56,7 +56,7 @@ public class menuPanel extends JPanel{
 	         pn.setBackground(Color.white);
 	         
 	         //메뉴 하나 하나 틀
-	         for (int j = 0; j < Data.type.length; j++)
+	         for (int j = 0; j < 6; j++)
 
 	         {
 	            //Product pr = Product.type[j];

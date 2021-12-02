@@ -13,10 +13,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.sun.glass.events.KeyEvent;
-import com.sun.prism.paint.Gradient;
+//import com.sun.glass.events.KeyEvent;
+//import com.sun.prism.paint.Gradient;
 
-import sun.java2d.loops.DrawLine;
+//import sun.java2d.loops.DrawLine;
 
 public class loginPanel extends JPanel{
 	public loginPanel() {
