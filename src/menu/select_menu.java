@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 
 import menu.menuFrame;
 
+//주문 수량 선택 창
 public class select_menu extends JFrame{
 	
 	String name;

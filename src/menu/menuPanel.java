@@ -40,7 +40,7 @@ public class menuPanel extends JPanel{
 	         JPanel temp = new JPanel();
 	         temp.setLayout(new BorderLayout());
 	         
-	         
+	         // 아래 주문 확인 틀
 	         JScrollPane scrollPane = new JScrollPane();
 	         scrollPane.setPreferredSize(new Dimension(630,500));
 	         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -48,14 +48,16 @@ public class menuPanel extends JPanel{
 	         scrollPane.getVerticalScrollBar().setUnitIncrement(15); //스크롤 속도
 	         temp.add(scrollPane, BorderLayout.CENTER);
 	         
-	         
+	         //
 	         JPanel pn = new JPanel();
 	         pn.setLayout(new GridLayout(0, 3,3,3));
 	         
 	         pn.setOpaque(true);
 	         pn.setBackground(Color.white);
 	         
+	         //메뉴 하나 하나 틀
 	         for (int j = 0; j < Data.type.length; j++)
+
 	         {
 	            //Product pr = Product.type[j];
 	        	String type = Data.menu[j];

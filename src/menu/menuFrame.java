@@ -50,13 +50,13 @@ public class menuFrame extends JFrame {
 		setLocationRelativeTo(null);
 		setResizable(false);
 		
-		
+		//맨 위 로고 부분
 		JPanel menutext = new JPanel();
 		menutext.setBounds(0, 0, 750, 100);
 		menutext.setBackground(Color.cyan);
 		add(menutext);
 		
-		
+		//그냥 메뉴 전체 틀ㄴ
 		JPanel frame = new JPanel();
 		frame.setBackground(Color.gray);
 		frame.setBounds(20, 120, 710, 510);
@@ -78,8 +78,31 @@ public class menuFrame extends JFrame {
 		pnCategory.setBounds(650, 150, 100, 450);
 		add(pnCategory);
 		
+//		
+//		//종류 선택 부분 틀(미완)
+//		JPanel select_type = new JPanel();
+//		select_type.setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
+//		select_type.setBounds(650, 130, 100, 450);
+//		JButton[] type_btn = new JButton[6];
+//		
+//		for(int i=0; i<6; i++) {
+//			type_btn[i]= new JButton(Data.type[i]);
+//			type_btn[i].setPreferredSize(new Dimension(100,50));
+//			//type_btn[i].addMouseListener(cc);
+//			select_type.add(type_btn[i]);
+//		}
+//		add(select_type);
 		
-		//주문창
+		/*
+		JLabel ordertext = new JLabel();
+		ordertext.setBounds(20,650,710,200);
+		ordertext.setPreferredSize(new Dimension(710,50));
+		ordertext.setBackground(Color.yellow);
+		ordertext.setOpaque(true);
+		ordertext.setHorizontalAlignment(JLabel.CENTER);
+		add(ordertext);*/
+		
+
 		orderFrame = new TextArea("", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 		orderFrame.setBounds(20,700,710,250);
 		orderFrame.setBackground(Color.pink);

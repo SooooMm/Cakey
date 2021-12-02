@@ -18,6 +18,7 @@ public class CategoryPanel extends JPanel{
 	public CategoryPanel(menuFrame mframe) {
 		this.mframe = mframe;
 		setSize(650,130);
+		setBounds(650, 130, 100, 450);
 		setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
 		
 		JButton[] type_btn = new JButton[6];
