@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 //import javafx.scene.layout.Pane;
-import data.Product;
+import data.Data;
 
 
 class menu_click implements ActionListener{
@@ -73,7 +73,7 @@ public class menuFrame extends JFrame {
 		
 		
 		//카테고리 패널
-		JPanel pnCategory = new CategoryPanel();
+		JPanel pnCategory = new CategoryPanel(this);
 		pnCategory.setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
 		pnCategory.setBounds(650, 150, 100, 450);
 		add(pnCategory);

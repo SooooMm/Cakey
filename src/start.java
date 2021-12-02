@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import manager.loginFrame;
 import menu.menuFrame;
 public class start extends JFrame{
 	public start() {
@@ -16,16 +18,20 @@ public class start extends JFrame{
 		setLocationRelativeTo(null);
 		setResizable(false);
 		
+		
+		
 		JPanel pn = new JPanel();
 		add(pn);
 		
 		pn.setLayout(null);
 		
 		JButton start_btn= new JButton("시작"); //시작 버튼
+		JButton manager = new JButton("관리자");
 		
-		
+		manager.setBounds(640, 20, 100, 50);
 		start_btn.setBounds(0, 815, 750, 175);
 		pn.add(start_btn);
+		pn.add(manager);
 		
 		
 		start_btn.addActionListener(new ActionListener() {
@@ -35,6 +41,15 @@ public class start extends JFrame{
 				new menuFrame();
 				setVisible(false);
 			
+			}
+		});
+		
+		manager.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new loginFrame();
+				
 			}
 		});
 	}

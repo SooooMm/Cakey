@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 
-import data.Product;
+import data.Data;
 
 public class menuPanel extends JPanel{
 	
@@ -34,8 +34,8 @@ public class menuPanel extends JPanel{
 	    pnCard.setLayout(card);
 	    add(pnCard);
 	    
-	    ArrayList<Product> pdList=null;
-	    for(int i=0; i<Product.type.length; i++) {
+	    ArrayList<Data> pdList=null;
+	    for(int i=0; i<Data.type.length; i++) {
 	       
 	         JPanel temp = new JPanel();
 	         temp.setLayout(new BorderLayout());
@@ -55,12 +55,12 @@ public class menuPanel extends JPanel{
 	         pn.setOpaque(true);
 	         pn.setBackground(Color.white);
 	         
-	         for (int j = 0; j < Product.type.length; j++)
+	         for (int j = 0; j < Data.type.length; j++)
 	         {
 	            //Product pr = Product.type[j];
-	        	String type = Product.menu[j];
-	        	int price = Product.price[j];
-	            ProductPanel pp = new ProductPanel(Product.menu[j]);
+	        	String type = Data.menu[j];
+	        	int price = Data.price[j];
+	            ProductPanel pp = new ProductPanel(Data.menu[j]);
 	            pp.setPreferredSize(new Dimension(150,225));
 	            pp.addMouseListener(new MouseAdapter() {
 	            	@Override
@@ -71,7 +71,7 @@ public class menuPanel extends JPanel{
 	            pn.add(pp);
 	            scrollPane.setViewportView(pn);
 	         }
-	         pnCard.add(Product.type[i], temp);
+	         pnCard.add(Data.type[i], temp);
 	         
 	    }
 	}
