@@ -1,15 +1,27 @@
+import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 import manager.loginFrame;
+import menu.Program;
 import menu.menuFrame;
+
 public class start extends JFrame{
+	JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
+	ImageIcon icon;
+	
+	
 	public start() {
 		super("Cakey");
 		setSize(750,1000);
@@ -17,10 +29,11 @@ public class start extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setResizable(false);
+		icon = new ImageIcon("../image/sheet_banila.jpg");//생성자에 ico호출 후, 이미지 경로 지정
 		
-		
-		
+        
 		JPanel pn = new JPanel();
+         
 		add(pn);
 		
 		pn.setLayout(null);
@@ -44,6 +57,8 @@ public class start extends JFrame{
 			}
 		});
 		
+		
+		
 		manager.addActionListener(new ActionListener() {
 			
 			@Override
@@ -53,9 +68,12 @@ public class start extends JFrame{
 			}
 		});
 	}
-
+	
+	
+	
 	public static void main(String[] args) {
 		new start();
 		
+	    }
 	}
-}
+
