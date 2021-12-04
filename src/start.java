@@ -49,7 +49,7 @@ public class start extends JFrame{
 			}
 		};
 
-		setSize(1280,720);//JFrame의 크기
+		//setSize(1280,720);//JFrame의 크기
 		setResizable(false);//창의 크기를 변경하지 못하게 해준다
 		setLocationRelativeTo(null);//창이 가운데 나오게 해준다
 		setLayout(null);
