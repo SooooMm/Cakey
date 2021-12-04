@@ -35,7 +35,7 @@ public class select_menu extends JFrame{
 		setResizable(false);
 		
 		this.name= name;
-		Color na = new Color(255,255,240);
+		Color na = new Color(220,220,220);
 		JLabel menu_name = new JLabel(name);
 		menu_name.setPreferredSize(new Dimension(460,75));
 		menu_name.setBackground(na);
