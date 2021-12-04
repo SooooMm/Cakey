@@ -15,7 +15,7 @@ public class UserDAO {
 	//private static UserDAO userdao = new UserDAO();
 	
 	
-		String url ="jdbc:mysql://localhost/users";
+		String url ="jdbc:mysql://localhost/cakey";
 		String pw = "Suy0Sm0tdo";
 		String name = "root";
 	
