@@ -16,7 +16,7 @@ import menu.menuFrame;
 //주문 수량 선택 창
 public class select_menu extends JFrame{
 	
-	Color se = new Color(222,184,135);
+	Color se = new Color(255,222,173);
 	String name;
 	int total;
 	
