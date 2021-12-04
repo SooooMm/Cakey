@@ -1,17 +1,31 @@
+import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.plaf.FontUIResource;
 
 import manager.loginFrame;
+import menu.Program;
 import menu.menuFrame;
+
 import user.UserDAO;
 
+
 public class start extends JFrame{
+	JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
+	ImageIcon icon;
+
+	
 	public start() {
 		super("Cakey");
 		setSize(750,1000);
@@ -19,15 +33,20 @@ public class start extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setResizable(false);
+		//icon = new ImageIcon("../image/sheet_banila.jpg");//생성자에 ico호출 후, 이미지 경로 지정
 		
-		
-		
+        
 		JPanel pn = new JPanel();
+         
 		add(pn);
 		
 		pn.setLayout(null);
 		
+	    
 		JButton start_btn= new JButton("시작"); //시작 버튼
+		start_btn.setText("~주문을 하시려면 여기를 눌러주세요~");
+		start_btn.setFont(new FontUIResource("돋움",FontUIResource.BOLD,32));
+        System.out.println("getText: " + start_btn.getText());		
 		JButton manager = new JButton("관리자");
 		
 		manager.setBounds(640, 20, 100, 50);
@@ -44,7 +63,10 @@ public class start extends JFrame{
 				setVisible(false);
 			
 			}
+			
 		});
+		
+		
 		
 		manager.addActionListener(new ActionListener() {
 			
@@ -55,9 +77,14 @@ public class start extends JFrame{
 			}
 		});
 	}
-
+	
+	
+	
 	public static void main(String[] args) {
 		new start();
+
 		new UserDAO();
+
+	    }
 	}
-}
+
