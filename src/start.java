@@ -20,7 +20,7 @@ import menu.menuFrame;
 public class start extends JFrame{
 	JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
 	ImageIcon icon;
-	
+
 	
 	public start() {
 		super("Cakey");
@@ -29,7 +29,7 @@ public class start extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setResizable(false);
-		icon = new ImageIcon("../image/sheet_banila.jpg");//생성자에 ico호출 후, 이미지 경로 지정
+		//icon = new ImageIcon("../image/sheet_banila.jpg");//생성자에 ico호출 후, 이미지 경로 지정
 		
         
 		JPanel pn = new JPanel();
@@ -38,6 +38,7 @@ public class start extends JFrame{
 		
 		pn.setLayout(null);
 		
+	
 		JButton start_btn= new JButton("시작"); //시작 버튼
 		JButton manager = new JButton("관리자");
 		
@@ -55,6 +56,7 @@ public class start extends JFrame{
 				setVisible(false);
 			
 			}
+			
 		});
 		
 		
