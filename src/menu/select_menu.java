@@ -34,10 +34,11 @@ public class select_menu extends JFrame{
 		setResizable(false);
 		
 		this.name= name;
-		
+		Color na = new Color(255,255,240);
 		JLabel menu_name = new JLabel(name);
 		menu_name.setPreferredSize(new Dimension(460,75));
-		menu_name.setBackground(Color.yellow);
+		menu_name.setBackground(na);
+		//menu_name.setBackground(Color.yellow);
 		menu_name.setOpaque(true);
 		menu_name.setHorizontalAlignment(JLabel.CENTER);
 		add(menu_name);
@@ -69,7 +70,8 @@ public class select_menu extends JFrame{
 		
 		menu_num.setPreferredSize(new Dimension(150,75));
 		menu_num.setHorizontalAlignment(JLabel.CENTER);
-		menu_num.setBackground(Color.yellow);
+		menu_num.setBackground(na);
+		//menu_num.setBackground(Color.yellow);
 		menu_num.setOpaque(true);
 		
 		add(minus);
