@@ -59,7 +59,7 @@ public class start extends JFrame{
 		add(pn);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//그냥 닫으면 프로그램이 정상적으로 종료*/
 
-//		//pn.setLayout(null);
+		pn.setLayout(null);
         add(pn);
 		Color s = new Color(204,153,102);
 		JButton start_btn= new JButton("시작"); //시작 버튼
