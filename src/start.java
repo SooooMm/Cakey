@@ -27,10 +27,10 @@ import user.UserDAO;
 
 public class start extends JFrame{
 	JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
-	private Image background = new ImageIcon(start.class.getResource("../image/back.jpg")).getImage();
-    
-	public start() {  
-	    
+	//ImageIcon icon;
+
+	public start() {
+
 		super("Cakey");
 		setSize(750,1000);
 		setVisible(true);
@@ -38,24 +38,36 @@ public class start extends JFrame{
 		setLocationRelativeTo(null);
 		setResizable(false);
 		//icon = new ImageIcon("../image/sheet_banila.jpg");//생성자에 ico호출 후, 이미지 경로 지정
-		
-	
-		JPanel pn = new JPanel();
-			
 
-		add(pn);
-		
+		//icon = new ImageIcon("../image/back.jpg");
+		JPanel pn = new JPanel() {
+			Image background = new ImageIcon(Program.class.getResource("../image/back.jpg")).getImage();
+			public void paint(Graphics g) { //그리는함수
+				g.drawImage(background,0,0,null); //background를 그려줌
+			}
+		};
+
+		setSize(1280,720);//JFrame의 크기
+		setResizable(false);//창의 크기를 변경하지 못하게 해준다
+		setLocationRelativeTo(null);//창이 가운데 나오게 해준다
+		setLayout(null);
+		setVisible(true);
 		pn.setLayout(null);
-		
+		pn.setBounds(0,0,500,600);
+		add(pn);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//그냥 닫으면 프로그램이 정상적으로 종료
+
+		pn.setLayout(null);
+
 		Color s = new Color(204,153,102);
 		JButton start_btn= new JButton("시작"); //시작 버튼
 		start_btn.setText("~주문을 하시려면 여기를 눌러주세요~");
-	    start_btn.setBackground(s);
+		start_btn.setBackground(s);
 		start_btn.setFont(new FontUIResource("돋움",FontUIResource.BOLD,32));
 		//start_btn.setBackground(ColorUIResource.WHITE);
-        System.out.println("getText: " + start_btn.getText());
-       
-        Color m = new Color(211,211,211);
+		System.out.println("getText: " + start_btn.getText());
+
+		Color m = new Color(211,211,211);
 		JButton manager = new JButton("관리자");
 		//manager.setBackground(ColorUIResource.GRAY);
 		manager.setBackground(m);
@@ -63,47 +75,38 @@ public class start extends JFrame{
 		start_btn.setBounds(0, 815, 750, 175);
 		pn.add(start_btn);
 		pn.add(manager);
-		
-		
+
+
 		start_btn.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new menuFrame(); //메뉴 프레임 생성
 				setVisible(false);
-				setVisible(true);//창이 보이게	
-				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//JFrame이 정상적으로 종료되게
+
 			}
-			
+
 		});
-		
-		
-	
+
+
+
 		manager.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new loginFrame();
-				
+
 			}
 		});
 	}
-	
 
-	
-	
-	
-	public void paint(Graphics g) {//그리는 함수
-		g.drawImage(background, 0, 0, null);//background를 그려줌
-	}
-	
+
+
 	public static void main(String[] args) {
 		new start();
 
 		new UserDAO();
- 
-      
-       
-	    }
+
 	}
+}
 
