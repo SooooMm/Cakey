@@ -9,6 +9,8 @@ import javax.swing.JPanel;
 
 import manager.loginFrame;
 import menu.menuFrame;
+import user.UserDAO;
+
 public class start extends JFrame{
 	public start() {
 		super("Cakey");
@@ -56,6 +58,6 @@ public class start extends JFrame{
 
 	public static void main(String[] args) {
 		new start();
-		
+		new UserDAO();
 	}
 }
