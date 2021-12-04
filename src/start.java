@@ -44,6 +44,8 @@ public class start extends JFrame{
 			Image background = new ImageIcon(Program.class.getResource("../image/back.jpg")).getImage();
 			public void paint(Graphics g) { //그리는함수
 				g.drawImage(background,0,0,null); //background를 그려줌
+				setOpaque(false);
+				super.paintComponent(g);
 			}
 		};
 

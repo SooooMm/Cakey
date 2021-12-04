@@ -121,6 +121,9 @@ public class menuFrame extends JFrame {
 	
 	
 	public static void main(String[] args) {
+		
 		new menuFrame();
+		
+		
 	}
 }
