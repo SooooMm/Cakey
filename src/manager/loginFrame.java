@@ -25,7 +25,7 @@ public class loginFrame extends JFrame{
 		//logo.setBackground(Color.pink);
 		add(logo);
 		
-		JPanel loginPanel = new loginPanel();
+		JPanel loginPanel = new loginPanel(this);
 		add(loginPanel);
 		
 		
