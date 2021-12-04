@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.GridBagLayout;
@@ -12,7 +13,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.colorchooser.ColorChooserComponentFactory;
+import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.FontUIResource;
+import javax.swing.text.AttributeSet.ColorAttribute;
 
 import manager.loginFrame;
 import menu.Program;
@@ -42,13 +46,18 @@ public class start extends JFrame{
 		
 		pn.setLayout(null);
 		
-	    
+		Color s = new Color(204,153,102);
 		JButton start_btn= new JButton("시작"); //시작 버튼
 		start_btn.setText("~주문을 하시려면 여기를 눌러주세요~");
+	    start_btn.setBackground(s);
 		start_btn.setFont(new FontUIResource("돋움",FontUIResource.BOLD,32));
-        System.out.println("getText: " + start_btn.getText());		
+		//start_btn.setBackground(ColorUIResource.WHITE);
+        System.out.println("getText: " + start_btn.getText());
+       
+        Color m = new Color(211,211,211);
 		JButton manager = new JButton("관리자");
-		
+		//manager.setBackground(ColorUIResource.GRAY);
+		manager.setBackground(m);
 		manager.setBounds(640, 20, 100, 50);
 		start_btn.setBounds(0, 815, 750, 175);
 		pn.add(start_btn);

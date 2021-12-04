@@ -25,7 +25,7 @@ public class signUpFrame extends JFrame{
 		
 		JLabel nameText = new JLabel("이       름 : ");
 		nameText.setBounds(30,100,110,30);
-		nameText.setFont(new Font(null, Font.PLAIN,18));
+		nameText.setFont(new Font(null, Font.BOLD,18));
 		add(nameText);
 		
 		JTextField name = new JTextField();
@@ -34,7 +34,7 @@ public class signUpFrame extends JFrame{
 		
 		JLabel phoneNumText = new JLabel("휴대전화 : ");
 		phoneNumText.setBounds(30,160,110,30);
-		phoneNumText.setFont(new Font(null, Font.PLAIN,18));
+		phoneNumText.setFont(new Font(null, Font.BOLD,18));
 		add(phoneNumText);
 		
 		JTextField phoneNum = new JTextField();
@@ -43,7 +43,7 @@ public class signUpFrame extends JFrame{
 		
 		JLabel idText = new JLabel("아 이 디  : ");
 		idText.setBounds(30,220,110,30);
-		idText.setFont(new Font(null, Font.PLAIN,18));
+		idText.setFont(new Font(null, Font.BOLD,18));
 		add(idText);
 		
 		JTextField id = new JTextField();
@@ -52,7 +52,7 @@ public class signUpFrame extends JFrame{
 		
 		JLabel pwText = new JLabel("비밀번호 : ");
 		pwText.setBounds(30,280,110,30);
-		pwText.setFont(new Font(null, Font.PLAIN,18));
+		pwText.setFont(new Font(null, Font.BOLD,18));
 		add(pwText);
 		
 		JTextField pw = new JTextField();

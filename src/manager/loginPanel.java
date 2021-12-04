@@ -22,14 +22,16 @@ import com.sun.javafx.embed.swing.Disposer;
 
 public class loginPanel extends JPanel{
 	public loginPanel() {
+		Color lp = new Color(253,245,230);
 		setBounds(250, 0, 450, 500);
 		setPreferredSize(new Dimension(450,500));
-		setBackground(Color.gray);
+		setBackground(lp);
+		//setBackground(Color.gray);
 		setLayout(null);
 		
 		JLabel idText = new JLabel("아  이  디 : ");
 		idText.setBounds(30,100,110,30);
-		idText.setFont(new Font(null, Font.PLAIN,18));
+		idText.setFont(new Font(null, Font.BOLD,18));
 		add(idText);
 		
 		JTextField id = new JTextField();
@@ -39,7 +41,7 @@ public class loginPanel extends JPanel{
 		
 		JLabel pwText = new JLabel("비밀번호 : ");
 		pwText.setBounds(30,160,110,30);
-		pwText.setFont(new Font(null, Font.PLAIN,18));
+		pwText.setFont(new Font(null, Font.BOLD,18));
 		add(pwText);
 		
 		JTextField pw = new JTextField();
@@ -61,8 +63,17 @@ public class loginPanel extends JPanel{
 //				
 //			}
 //		});
-		
-		
+
+		Color lost = new Color(220,220,220);
+		JButton search_btn = new JButton("id/pw 찾기");
+		search_btn.setBounds(240,220,150,30);
+		search_btn.setBackground(lost);
+		add(search_btn);
+
+		JButton signUp_btn = new JButton("회원가입");
+		signUp_btn.setBounds(30,330,175,60);
+		signUp_btn.setBackground(lost);
+
 		JButton login_btn = new JButton("로그인");
 		login_btn.setBounds(30,250,360,60);
 		
@@ -79,8 +90,8 @@ public class loginPanel extends JPanel{
 				
 			}
 		});
-		
-		//add(signUp_btn);
+
+
 		add(login_btn);
 		
 		
