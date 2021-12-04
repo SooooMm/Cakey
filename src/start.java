@@ -22,6 +22,9 @@ import manager.loginFrame;
 import menu.Program;
 import menu.menuFrame;
 
+import user.UserDAO;
+
+
 public class start extends JFrame{
 	JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
 	ImageIcon icon;
@@ -88,7 +91,9 @@ public class start extends JFrame{
 	
 	public static void main(String[] args) {
 		new start();
-		
+
+		new UserDAO();
+
 	    }
 	}
 
