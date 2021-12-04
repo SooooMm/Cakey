@@ -13,6 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.sun.javafx.embed.swing.Disposer;
+
 //import com.sun.glass.events.KeyEvent;
 //import com.sun.prism.paint.Gradient;
 
@@ -45,28 +47,42 @@ public class loginPanel extends JPanel{
 		// 비밀번호 제한
 		add(pw);
 		
-		JButton search_btn = new JButton("id/pw 찾기");
-		search_btn.setBounds(240,220,150,30);
-		add(search_btn);
+//		JButton search_btn = new JButton("id/pw 찾기");
+//		search_btn.setBounds(240,220,150,30);
+//		add(search_btn);
+//		
+//		JButton signUp_btn = new JButton("회원가입");
+//		signUp_btn.setBounds(30,330,175,60);
+//		
+//		signUp_btn.addActionListener(new ActionListener() {
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				new signUpFrame();
+//				
+//			}
+//		});
 		
-		JButton signUp_btn = new JButton("회원가입");
-		signUp_btn.setBounds(30,330,175,60);
 		
-		signUp_btn.addActionListener(new ActionListener() {
+		JButton login_btn = new JButton("로그인");
+		login_btn.setBounds(30,250,360,60);
+		
+		login_btn.addActionListener(new ActionListener() {
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new signUpFrame();
+				System.out.println(id.getText());
+				System.out.println(pw.getText());
+				if(id.getText().equals("admin")&&pw.getText().equals("admin1234")) {
+					System.out.println("로그인 성공");
+				}
+				new managerFrame();
 				
 			}
 		});
 		
-		
-		JButton login_btn = new JButton("로그인");
-		login_btn.setBounds(210,330,175,60);
-		
-		
-		add(signUp_btn);
+		//add(signUp_btn);
 		add(login_btn);
+		
 		
 		
 		
