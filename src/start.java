@@ -27,10 +27,11 @@ import user.UserDAO;
 
 public class start extends JFrame{
 	JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
-	ImageIcon icon;
+	private Image background = new ImageIcon(start.class.getResource("../image/back.jpg")).getImage();
     
 	public start() {
-	
+	    homeframe();
+	    
 		super("Cakey");
 		setSize(750,1000);
 		setVisible(true);
@@ -39,17 +40,10 @@ public class start extends JFrame{
 		setResizable(false);
 		//icon = new ImageIcon("../image/sheet_banila.jpg");//생성자에 ico호출 후, 이미지 경로 지정
 		
-		icon = new ImageIcon("../image/back.jpg");
-		JPanel pn = new JPanel() {
-			public void paintComponent(Graphics g) {
-				g.drawImage(icon.getImage(),0,0,null);
-				setOpaque(false);
-				super.paintComponent(g);
-			}
-		};
+	
+		JPanel pn = new JPanel();
 			
-        
-		
+
 		add(pn);
 		
 		pn.setLayout(null);
@@ -84,7 +78,7 @@ public class start extends JFrame{
 		});
 		
 		
-		
+	
 		manager.addActionListener(new ActionListener() {
 			
 			@Override
@@ -94,17 +88,21 @@ public class start extends JFrame{
 			}
 		});
 	}
+	public void homeframe() {
+		setVisible(true);//창이 보이게	
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//JFrame이 정상적으로 종료되게
+	}
 	
-	
+	public void paint(Graphics g) {//그리는 함수
+		g.drawImage(background, 0, 0, null);//background를 그려줌
+	}
 	
 	public static void main(String[] args) {
 		new start();
 
 		new UserDAO();
-        start frame = new start();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300,300);
-        frame.setVisible(true);
+ 
+      
        
 	    }
 	}
