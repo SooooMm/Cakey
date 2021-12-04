@@ -60,7 +60,7 @@ public class start extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//그냥 닫으면 프로그램이 정상적으로 종료*/
 
 //		//pn.setLayout(null);
-add(pn);
+        add(pn);
 		Color s = new Color(204,153,102);
 		JButton start_btn= new JButton("시작"); //시작 버튼
 		start_btn.setText("~주문을 하시려면 여기를 눌러주세요~");
@@ -75,8 +75,8 @@ add(pn);
 		manager.setBackground(m);
 		manager.setBounds(640, 20, 100, 50);
 		start_btn.setBounds(0, 815, 750, 175);
-		//pn.add(start_btn);
-		//pn.add(manager);
+		pn.add(start_btn);
+		pn.add(manager);
 
 
 		start_btn.addActionListener(new ActionListener() {
