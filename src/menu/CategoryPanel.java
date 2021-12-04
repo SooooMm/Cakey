@@ -1,6 +1,7 @@
 package menu;
 
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.MouseAdapter;
@@ -22,8 +23,10 @@ public class CategoryPanel extends JPanel{
 		setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
 		
 		JButton[] type_btn = new JButton[6];
-		
+		Color ca = new Color(240,230,140);
+		//type_btn.setBackground(ca);
 		for(int i=0; i<6; i++) {
+		
 			type_btn[i]= new JButton(Data.type[i]);
 			type_btn[i].setPreferredSize(new Dimension(100,50));
 			//type_btn[i].addMouseListener(cc);

@@ -50,23 +50,30 @@ public class menuFrame extends JFrame {
 		setLocationRelativeTo(null);
 		setResizable(false);
 		
+		
 		//맨 위 로고 부분
+		Color t = new Color(204,153,102);
 		JPanel menutext = new JPanel();
+		menutext.setBackground(t);
 		menutext.setBounds(0, 0, 750, 100);
-		menutext.setBackground(Color.cyan);
+		//menutext.setBackground(Color.cyan);
 		add(menutext);
 		
-		//그냥 메뉴 전체 틀ㄴ
+		//그냥 메뉴 전체 틀
+		Color j = new Color(255,239,213);
 		JPanel frame = new JPanel();
-		frame.setBackground(Color.gray);
+		frame.setBackground(j);
+		//frame.setBackground(Color.gray);
 		frame.setBounds(20, 120, 710, 510);
 		frame.setLayout(null);
 		add(frame);
 		
 		
 		//메뉴 패널
+		Color p = new Color(255,228,181);
 		JPanel pnMenu = new menuPanel();
-		pnMenu.setBackground(Color.green);
+		pnMenu.setBackground(p);
+		//pnMenu.setBackground(Color.green);
 		pnMenu.setBounds(0, 0, 630, 500);
 		pnMenu.setLayout(new FlowLayout(FlowLayout.LEFT,5,5));
 		frame.add(pnMenu);
@@ -102,10 +109,11 @@ public class menuFrame extends JFrame {
 		ordertext.setHorizontalAlignment(JLabel.CENTER);
 		add(ordertext);*/
 		
-
+		Color f = new Color(255,235,205);
 		orderFrame = new TextArea("", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 		orderFrame.setBounds(20,700,710,250);
-		orderFrame.setBackground(Color.pink);
+		orderFrame.setBackground(f);
+		//orderFrame.setBackground(Color.pink);
 		add(orderFrame);
 		
 		

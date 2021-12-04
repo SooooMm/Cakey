@@ -17,11 +17,12 @@ public class loginFrame extends JFrame{
 		setLocationRelativeTo(null);
 		setResizable(false);
 		
-		
+		Color c = new Color(210,180,140);
 		JPanel logo = new JPanel();
 		logo.setBounds(0, 0, 250, 500);
 		logo.setPreferredSize(new Dimension(250,500));
-		logo.setBackground(Color.pink);
+		logo.setBackground(c);
+		//logo.setBackground(Color.pink);
 		add(logo);
 		
 		JPanel loginPanel = new loginPanel();
