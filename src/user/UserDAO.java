@@ -12,7 +12,7 @@ public class UserDAO {
 	private PreparedStatement pstmt;
 	private CallableStatement cstmt;
 	private ResultSet rs;
-	private static UserDAO userdao = new UserDAO();
+	//private static UserDAO userdao = new UserDAO();
 	
 	
 		String url ="jdbc:mysql://localhost/users";
@@ -31,13 +31,10 @@ public class UserDAO {
 			}
 			
 		}
-		
-		public static UserDAO getDatabaseInstance() {
-			return userdao;
-		}
-		public Connection getThecConnectionObject() {
-			return conn;
-		}
+	/*
+	 * public static UserDAO getDatabaseInstance() { return userdao; } public
+	 * Connection getThecConnectionObject() { return conn; }
+	 */
 		
 	
 }
