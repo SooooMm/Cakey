@@ -17,6 +17,7 @@ public class Program extends JFrame {
 	   };
 	   
     public Program() {
+    	
     	setTitle("TEST");
     	setSize(1280,720);//JFrame의 크기
     	setResizable(false);//창의 크기를 변경하지 못하게 해준다

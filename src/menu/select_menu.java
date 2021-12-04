@@ -16,6 +16,7 @@ import menu.menuFrame;
 //주문 수량 선택 창
 public class select_menu extends JFrame{
 	
+	Color se = new Color(255,250,250);
 	String name;
 	int total;
 	
@@ -46,7 +47,8 @@ public class select_menu extends JFrame{
 		JLabel menu_num = new JLabel("0");
 		JButton plus = new JButton("+");
 		JButton minus = new JButton("-");
-		
+		plus.setBackground(se);
+		minus.setBackground(se);
 		plus.setPreferredSize(new Dimension(75,75));
 		minus.setPreferredSize(new Dimension(75,75));
 		
@@ -59,6 +61,7 @@ public class select_menu extends JFrame{
 				
 			}
 		});
+		
 		plus.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -82,6 +85,7 @@ public class select_menu extends JFrame{
 		
 		
 		JButton ok_btn = new JButton("확인");
+		ok_btn.setBackground(se);
 		ok_btn.setPreferredSize(new Dimension(360,75));
 		ok_btn.addActionListener(new ActionListener() {
 			@Override
@@ -97,9 +101,11 @@ public class select_menu extends JFrame{
 				dispose();
 			}
 		});
+		
 		add(ok_btn);
 		                       							
 		JButton cancel_btn = new JButton("취소");
+		cancel_btn.setBackground(se);
 		cancel_btn.setPreferredSize(new Dimension(100,75));
 		cancel_btn.addActionListener(new ActionListener() {
 			@Override
