@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import data.Data;
 
 public class CategoryPanel extends JPanel{
+	//Color ca = new Color(253,245,230);
 	menuFrame mframe;
 	public JButton type_btn;
 	
@@ -23,18 +24,21 @@ public class CategoryPanel extends JPanel{
 		setLayout(new FlowLayout(FlowLayout.RIGHT,0,20));
 		
 		JButton[] type_btn = new JButton[6];
-		Color ca = new Color(240,230,140);
-		//type_btn.setBackground(ca);
-		for(int i=0; i<6; i++) {
+		Color ca = new Color(253,245,230);
 		
+		
+		
+		for(int i=0; i<6; i++) {
+			
 			type_btn[i]= new JButton(Data.type[i]);
 			type_btn[i].setPreferredSize(new Dimension(100,50));
 			//type_btn[i].addMouseListener(cc);
+			type_btn[i].setBackground(ca);
 			add(type_btn[i]);
-		}
-		
-		
+			
+		}	
 	}
+	
 	public class changeCard extends MouseAdapter{
 		public changeCard() {}
 		

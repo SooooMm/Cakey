@@ -28,9 +28,9 @@ import user.UserDAO;
 public class start extends JFrame{
 	JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
 	ImageIcon icon;
-
-	
+    
 	public start() {
+		
 		super("Cakey");
 		setSize(750,1000);
 		setVisible(true);
@@ -39,9 +39,11 @@ public class start extends JFrame{
 		setResizable(false);
 		//icon = new ImageIcon("../image/sheet_banila.jpg");//생성자에 ico호출 후, 이미지 경로 지정
 		
-        
+	
 		JPanel pn = new JPanel();
-         
+			
+        
+		
 		add(pn);
 		
 		pn.setLayout(null);
@@ -93,7 +95,8 @@ public class start extends JFrame{
 		new start();
 
 		new UserDAO();
-
+     
+       
 	    }
 	}
 
