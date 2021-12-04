@@ -29,8 +29,7 @@ public class start extends JFrame{
 	JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
 	private Image background = new ImageIcon(start.class.getResource("../image/back.jpg")).getImage();
     
-	public start() {
-	    homeframe();
+	public start() {  
 	    
 		super("Cakey");
 		setSize(750,1000);
@@ -72,7 +71,8 @@ public class start extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				new menuFrame(); //메뉴 프레임 생성
 				setVisible(false);
-			
+				setVisible(true);//창이 보이게	
+				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//JFrame이 정상적으로 종료되게
 			}
 			
 		});
@@ -88,10 +88,10 @@ public class start extends JFrame{
 			}
 		});
 	}
-	public void homeframe() {
-		setVisible(true);//창이 보이게	
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//JFrame이 정상적으로 종료되게
-	}
+	
+
+	
+	
 	
 	public void paint(Graphics g) {//그리는 함수
 		g.drawImage(background, 0, 0, null);//background를 그려줌
