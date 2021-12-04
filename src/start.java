@@ -30,7 +30,7 @@ public class start extends JFrame{
 	ImageIcon icon;
     
 	public start() {
-		
+	
 		super("Cakey");
 		setSize(750,1000);
 		setVisible(true);
@@ -39,8 +39,14 @@ public class start extends JFrame{
 		setResizable(false);
 		//icon = new ImageIcon("../image/sheet_banila.jpg");//생성자에 ico호출 후, 이미지 경로 지정
 		
-	
-		JPanel pn = new JPanel();
+		icon = new ImageIcon("../image/back.jpg");
+		JPanel pn = new JPanel() {
+			public void paintComponent(Graphics g) {
+				g.drawImage(icon.getImage(),0,0,null);
+				setOpaque(false);
+				super.paintComponent(g);
+			}
+		};
 			
         
 		
@@ -95,7 +101,10 @@ public class start extends JFrame{
 		new start();
 
 		new UserDAO();
-     
+        start frame = new start();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300,300);
+        frame.setVisible(true);
        
 	    }
 	}
