@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.plaf.FontUIResource;
 
 import manager.loginFrame;
 import menu.Program;
@@ -38,8 +39,11 @@ public class start extends JFrame{
 		
 		pn.setLayout(null);
 		
-	
+	    
 		JButton start_btn= new JButton("시작"); //시작 버튼
+		start_btn.setText("~주문을 하시려면 여기를 눌러주세요~");
+		start_btn.setFont(new FontUIResource("돋움",FontUIResource.BOLD,32));
+        System.out.println("getText: " + start_btn.getText());		
 		JButton manager = new JButton("관리자");
 		
 		manager.setBounds(640, 20, 100, 50);
