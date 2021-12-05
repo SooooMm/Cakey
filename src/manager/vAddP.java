@@ -18,7 +18,7 @@ import user.UserDAO;
 import manager.*;
 import menu.*;
 
-public class vCream extends JPanel{
+public class vAddP extends JPanel{
 	public Statement stmt;
 	public String sql;
 	String category;
@@ -26,8 +26,8 @@ public class vCream extends JPanel{
 	
 	JPanel menuList;
 	
-	public vCream() {
-		System.out.println("Å©¸²Ä­");
+	public vAddP() {
+		System.out.println("Ãß°¡¿ëÇ°Ä­");
 		setLayout(new FlowLayout(FlowLayout.LEFT,10,10));
 		setLayout(null);
 		setBounds(0, 0, 550, 1000);
@@ -64,7 +64,7 @@ public class vCream extends JPanel{
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new addFrame("Cream");
+				new addFrame("Addp");
 
 			}
 		});
@@ -72,7 +72,7 @@ public class vCream extends JPanel{
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new editFrame("Cream");
+				new editFrame("Addp");
 
 			}
 		});
@@ -80,7 +80,7 @@ public class vCream extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new delFrame("Cream");
+				new delFrame("Addp");
 				
 			}
 		});
@@ -103,7 +103,7 @@ public class vCream extends JPanel{
 			menuList.repaint();
 			count=0;
 			stmt = UserDAO.conn.createStatement();
-			sql="SELECT * FROM Cream";
+			sql="SELECT * FROM Addp";
 			ResultSet rs = stmt.executeQuery(sql);
 			
 			while(rs.next()) {

@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.Statement;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -30,11 +31,15 @@ public class managerFrame extends JFrame implements ActionListener{
 	
 	  vSheet vs = new vSheet(); 
 	  vCream vc = new vCream(); 
-	/*
-	 * vIngre vi= new vIngre(); vTopng vt= new vTopng(); vFloor vf= new vFloor();
-	 * vAddP va == new vAddP();
-	 */
+	  vIngre vi= new vIngre(); 
+	  vTopng vt= new vTopng(); 
+	  vFloor vf= new vFloor();
+	  vAddP va = new vAddP();
 	 
+
+	public Statement stmt;
+	public String sql;
+	String category;
 
 	public managerFrame() {
 		setTitle("관리");
@@ -52,6 +57,10 @@ public class managerFrame extends JFrame implements ActionListener{
 		
 		pnCard.add("vs", vs);
 		pnCard.add("vc", vc);
+		pnCard.add("vi", vi);
+		pnCard.add("vt", vt);
+		pnCard.add("vf", vf);
+		pnCard.add("va", va);
 		
 		card.show(pnCard, "vs"); //실행하자마자 보이는
 		add(pnCard);
@@ -83,6 +92,14 @@ public class managerFrame extends JFrame implements ActionListener{
 	         card.show(pnCard, "vs");
 	     }else if(ob == category_btn[1]) {
 	    	 card.show(pnCard, "vc");
+	     }else if(ob == category_btn[2]) {
+	    	 card.show(pnCard, "vi");
+	     }else if(ob == category_btn[3]) {
+	    	 card.show(pnCard, "vt");
+	     }else if(ob == category_btn[4]) {
+	    	 card.show(pnCard, "vf");
+	     }else if(ob == category_btn[5]) {
+	    	 card.show(pnCard, "va");
 	     }
 
 	 
