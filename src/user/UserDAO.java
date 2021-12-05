@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserDAO {
-	private static Connection conn;
+	public static Connection conn;
 	private PreparedStatement pstmt;
 	private CallableStatement cstmt;
 	private ResultSet rs;
