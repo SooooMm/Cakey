@@ -116,6 +116,8 @@ public class select_menu extends JFrame{
 		});
 		add(cancel_btn);
 		
+		
+		
 	}
 	
 	/*
