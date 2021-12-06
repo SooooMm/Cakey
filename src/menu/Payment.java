@@ -16,7 +16,7 @@ public class Payment extends JFrame{
 		}
 	};
 
-	public payment() {
+	public Payment() {
 
 		setTitle("TEST");
 		setSize(1280,720);//JFrame의 크기
@@ -30,3 +30,4 @@ public class Payment extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//그냥 닫으면 프로그램이 정상적으로 종료X
 	}
 }
+
