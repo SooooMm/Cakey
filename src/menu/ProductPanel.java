@@ -17,15 +17,21 @@ import user.Product;
 //메뉴 하나의 틀 (사진, 이름 ) ** 쭈희 **
 public class ProductPanel extends JPanel{
 	String name;
-	public ProductPanel(Product t) {
+	String url;
+	Image imageone;
+	public ProductPanel(String t) {
 		setBorder(new EmptyBorder(10,10,10,10));
 		setPreferredSize(new Dimension(150,225));
 		setBackground(Color.PINK);
-		name=t.getName();
-		JLabel jlabel = new JLabel(name);
+		name=t;
+		url = "../image/"+name;
+		System.out.println(t);
+		System.out.println(url);
+		JLabel jlabel = new JLabel(t);
 		add(jlabel);
+		imageone= new ImageIcon(Program.class.getResource(url)).getImage();
 	}
-	Image imageone= new ImageIcon(Program.class.getResource("../image/sheet_banila.jpg")).getImage();
+	
 	public void paint(Graphics g) { //그리는함수
 		//setSize(10,10);
 		Dimension d = getSize();
