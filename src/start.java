@@ -39,15 +39,15 @@ public class start extends JFrame{
 		setResizable(false);
 		//icon = new ImageIcon("../image/sheet_banila.jpg");//생성자에 ico호출 후, 이미지 경로 지정
 
-		icon = new ImageIcon("../image/back.jpg");
-		JPanel pn = new JPanel() {
+		//icon = new ImageIcon("../image/back.jpg");
+		JPanel pn = new JPanel();
 			//Image background = new ImageIcon(Program.class.getResource("../image/back.jpg")).getImage();
-			public void paint(Graphics g) { //그리는함수
+			/*public void paint(Graphics g) { //그리는함수
 				g.drawImage(icon.getImage(),0,0,null); //background를 그려줌
 				setOpaque(false);
 				super.paintComponent(g);
 			}
-		};
+		};*/
 
 		//setSize(1280,720);//JFrame의 크기
 		/*setResizable(false);//창의 크기를 변경하지 못하게 해준다
@@ -108,10 +108,10 @@ public class start extends JFrame{
 
 
 	public static void main(String[] args) {
-		start frame = new start();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		new start();
+		/*frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		   frame.setSize(300, 300);
-	        frame.setVisible(true);
+	        frame.setVisible(true);*/
 		new UserDAO();
 
 	}
