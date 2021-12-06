@@ -26,8 +26,8 @@ import user.UserDAO;
 
 
 public class start extends JFrame{
-	JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
-	ImageIcon icon;
+	//JScrollPane scrollPane; //컴포넌트에 스크롤 기능을 제공함
+	//ImageIcon icon;
 
 	public start() {
 
@@ -67,9 +67,9 @@ public class start extends JFrame{
 		start_btn.setBackground(s);
 		start_btn.setFont(new FontUIResource("돋움",FontUIResource.BOLD,32));
 		//start_btn.setBackground(ColorUIResource.WHITE);
-		pn.add(start_btn);
-		scrollPane = new JScrollPane(pn);
-		setContentPane(scrollPane);
+		//pn.add(start_btn);
+		//scrollPane = new JScrollPane(pn);
+		//setContentPane(scrollPane);
 		System.out.println("getText: " + start_btn.getText());
          
 		Color m = new Color(211,211,211);
@@ -78,10 +78,10 @@ public class start extends JFrame{
 		manager.setBackground(m);
 		manager.setBounds(640, 20, 100, 50);
 		start_btn.setBounds(0, 815, 750, 175);
-		//pn.add(start_btn);
+		pn.add(start_btn);
 		pn.add(manager);
-		scrollPane = new JScrollPane(pn);
-		 setContentPane(scrollPane); 
+		//scrollPane = new JScrollPane(pn);
+		 //setContentPane(scrollPane); 
 		start_btn.addActionListener(new ActionListener() {
 
 			@Override
