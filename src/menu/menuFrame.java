@@ -26,6 +26,8 @@ class menu_click implements ActionListener{
 	int price;
 	
 	
+
+	
 	public menu_click() {
 		
 	}
@@ -118,6 +120,18 @@ public class menuFrame extends JFrame {
 		//orderFrame.setBackground(Color.pink);
 		add(orderFrame);
 		
+		JButton b1= new JButton("결제");
+		b1.setText("결제하기");
+		b1.setBounds(640, 20, 100, 50);
+		menutext.add(b1);
+		
+		
+		b1.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				new Payment();
+				setVisible(false);
+			}
+		});
 		
 	}
 	
