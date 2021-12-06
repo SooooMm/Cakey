@@ -93,7 +93,7 @@ public class select_menu extends JFrame{
 				total=Integer.parseInt(menu_num.getText()) * price;
 				if(total>0) {
 					System.out.println("이름 : "+name+" 가격 : "+total);
-					menu.menuFrame.orderFrame.append("이름 : "+name+" 가격 : "+total);
+					menu.menuFrame.orderFrame.append("이름 : "+name+" 가격 : "+total+"\n");
 					//orderFrame.selectAll();
 					//orderFrame.setCaretPosition(orderFrame.getDocument().getLength());
 				}

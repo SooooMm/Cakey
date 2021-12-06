@@ -43,7 +43,7 @@ public class menuPanel extends JPanel{
 	
 	public menuPanel() {
 		Data data = new Data();
-		HashMap<Integer, ArrayList<Product>> prmap = data.getProductsByType();
+		//HashMap<Integer, ArrayList<Product>> prmap = data.getProductsByType();
 		setPreferredSize(new Dimension(600,500));
 	
 		
@@ -61,8 +61,8 @@ public class menuPanel extends JPanel{
 	    
 	    ArrayList<Product> pdList=null;
 	    for(int i=0; i<Data.type.length; i++) {
-	    	pdList = prmap.get(i);
-	    	System.out.println("******"+pdList);
+	    	//pdList = prmap.get(i);
+	    	//System.out.println("******"+pdList);
 	         JPanel temp = new JPanel();
 	         temp.setLayout(new BorderLayout());
 	         
@@ -81,15 +81,17 @@ public class menuPanel extends JPanel{
 	         pn.setOpaque(true);
 	         pn.setBackground(Color.white);
 	         
-	         System.out.println(pdList.size());
+	         //System.out.println(pdList.size());
 	         //메뉴 하나 하나 틀
-	         for (int j = 0; j < pdList.size(); j++)
+	         for (int j = 0; j <Data.menu[i].length; j++)
 
 	         {
-	            Product pr = pdList.get(j);
-	        	String type = Data.menu[j];
-	        	int price = Data.price[j];
-	            ProductPanel pp = new ProductPanel(pr);
+	            //Product pr = pdList.get(j);
+	        	String type = Data.menu[i][j];
+	        	int price = Data.price[i][j];
+	        	String filename = Data.Filename[i][j];
+	        	
+	            ProductPanel pp = new ProductPanel(filename);
 	            pp.setPreferredSize(new Dimension(150,225));
 	            pp.addMouseListener(new MouseAdapter() {
 	            	@Override
