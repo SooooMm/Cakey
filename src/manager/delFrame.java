@@ -49,13 +49,19 @@ public class delFrame extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				String name = MN.getText();
 				try {
 					stmt = UserDAO.conn.createStatement();
-					sql="DELETE FROM "+category+" WHERE name='해피'";
-					int afectCnt = stmt.executeUpdate(sql);
+					
+					sql="DELETE FROM "+category+" WHERE name = ?";;
+					UserDAO.pstmt=UserDAO.conn.prepareStatement(sql);
+					
+					UserDAO.pstmt.setString(1, name);
+					
+					int afectCnt = UserDAO.pstmt.executeUpdate();
 					System.out.println(afectCnt); //영향 받은 데이터 몇개
 					
-					
+					UserDAO.pstmt.close();
 					
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block

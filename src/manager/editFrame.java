@@ -80,13 +80,25 @@ public class editFrame extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				String name=manuName.getText();
+				String editNametemp=editName.getText();
+				int priceTemp = Integer.parseInt(price.getText());
+				String fileSrcTemp = FileSrc.getText();
 				try {
 					stmt = UserDAO.conn.createStatement();
-					sql="UPDATE "+category+" SET name ='해피',price=2000, fileSrc='sad' WHERE name='해치'";
-					int afectCnt = stmt.executeUpdate(sql);
+					sql="UPDATE "+category+" SET name = ?,price= ?, fileSrc=? WHERE name=?";
+
+					UserDAO.pstmt=UserDAO.conn.prepareStatement(sql);
+					
+					UserDAO.pstmt.setString(1, editNametemp);
+					UserDAO.pstmt.setInt(2, priceTemp);
+					UserDAO.pstmt.setString(3, fileSrcTemp);
+					UserDAO.pstmt.setString(4, name);
+					
+					int afectCnt = UserDAO.pstmt.executeUpdate();
 					System.out.println(afectCnt); //영향 받은 데이터 몇개
 					
-					
+					UserDAO.pstmt.close();
 					
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block

@@ -12,15 +12,17 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import data.*;
+import user.Product;
 
 //메뉴 하나의 틀 (사진, 이름 ) ** 쭈희 **
 public class ProductPanel extends JPanel{
-
-	public ProductPanel(String t) {
+	String name;
+	public ProductPanel(Product t) {
 		setBorder(new EmptyBorder(10,10,10,10));
 		setPreferredSize(new Dimension(150,225));
 		setBackground(Color.PINK);
-		JLabel jlabel = new JLabel(t);
+		name=t.getName();
+		JLabel jlabel = new JLabel(name);
 		add(jlabel);
 	}
 	Image imageone= new ImageIcon(Program.class.getResource("../image/sheet_banila.jpg")).getImage();

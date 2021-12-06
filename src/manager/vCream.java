@@ -115,7 +115,7 @@ public class vCream extends JPanel{
 				result = result.format("%d : %s\t%d\t%s", ++count,name,price,Filesrc);
 				System.out.println(result);
 				
-				ProductPanel pp = new ProductPanel(name);
+				ProductListPanel pp = new ProductListPanel(name,price,Filesrc);
 				menuList.add(pp);
 			}
 			

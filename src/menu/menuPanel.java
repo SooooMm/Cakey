@@ -8,20 +8,42 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 
 import data.Data;
+import manager.vAddP;
+import manager.vCream;
+import manager.vFloor;
+import manager.vIngre;
+import manager.vSheet;
+import manager.vTopng;
+import user.Product;
+import user.UserDAO;
 
 public class menuPanel extends JPanel{
 	
-	public JPanel pnCard;
-	public CardLayout card;
+	public static JPanel pnCard;
+	public static CardLayout card;
+	
+	/*
+	 * vSheet vs = new vSheet(); vCream vc = new vCream(); vIngre vi= new vIngre();
+	 * vTopng vt= new vTopng(); vFloor vf= new vFloor(); vAddP va = new vAddP();
+	 */
+	int count=0;
+	public Statement stmt;
+	public String sql;
+	String category;
 	
 	public menuPanel() {
+		Data data = new Data();
+		HashMap<Integer, ArrayList<Product>> prmap = data.getProductsByType();
 		setPreferredSize(new Dimension(600,500));
 	
 		
@@ -32,11 +54,15 @@ public class menuPanel extends JPanel{
 	    card = new CardLayout(0, 0);
 	    pnCard = new JPanel();
 	    pnCard.setLayout(card);
-	    add(pnCard);
 	    
-	    ArrayList<Data> pdList=null;
+	    
+
+		add(pnCard);
+	    
+	    ArrayList<Product> pdList=null;
 	    for(int i=0; i<Data.type.length; i++) {
-	       
+	    	pdList = prmap.get(i);
+	    	System.out.println("******"+pdList);
 	         JPanel temp = new JPanel();
 	         temp.setLayout(new BorderLayout());
 	         
@@ -55,14 +81,15 @@ public class menuPanel extends JPanel{
 	         pn.setOpaque(true);
 	         pn.setBackground(Color.white);
 	         
+	         System.out.println(pdList.size());
 	         //메뉴 하나 하나 틀
-	         for (int j = 0; j < 6; j++)
+	         for (int j = 0; j < pdList.size(); j++)
 
 	         {
-	            //Product pr = Product.type[j];
+	            Product pr = pdList.get(j);
 	        	String type = Data.menu[j];
 	        	int price = Data.price[j];
-	            ProductPanel pp = new ProductPanel(Data.menu[j]);
+	            ProductPanel pp = new ProductPanel(pr);
 	            pp.setPreferredSize(new Dimension(150,225));
 	            pp.addMouseListener(new MouseAdapter() {
 	            	@Override
@@ -76,18 +103,16 @@ public class menuPanel extends JPanel{
 	         pnCard.add(Data.type[i], temp);
 	         
 	    }
+	    
+	    
+	    
+
+	    
+	    
+	    
+	    
+	    
 	}
 }
 
-/*
- * 
- * public class changeCard extends MouseAdapter
-	{
-		
-		@Override
-		public void mouseClicked(MouseEvent e) {
-			CardLayout card = 
-			super.mouseClicked(e);
-		}
-	}
- * */
+

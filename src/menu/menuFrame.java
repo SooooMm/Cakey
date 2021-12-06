@@ -25,6 +25,7 @@ class menu_click implements ActionListener{
 	String name;
 	int price;
 	
+	
 	public menu_click() {
 		
 	}
@@ -40,6 +41,7 @@ class menu_click implements ActionListener{
 
 public class menuFrame extends JFrame {
 	public static TextArea orderFrame;
+	JPanel pnMenu = new menuPanel();
 	
 	public menuFrame() {
 		super("메뉴 선택");
@@ -71,7 +73,7 @@ public class menuFrame extends JFrame {
 		
 		//메뉴 패널
 		Color p = new Color(255,228,181);
-		JPanel pnMenu = new menuPanel();
+		
 		pnMenu.setBackground(p);
 		//pnMenu.setBackground(Color.green);
 		pnMenu.setBounds(0, 0, 630, 500);

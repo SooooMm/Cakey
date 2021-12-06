@@ -9,9 +9,10 @@ import java.sql.SQLException;
 
 public class UserDAO {
 	public static Connection conn;
-	private PreparedStatement pstmt;
+	public static PreparedStatement pstmt;
 	private CallableStatement cstmt;
 	private ResultSet rs;
+	
 	//private static UserDAO userdao = new UserDAO();
 	
 	
